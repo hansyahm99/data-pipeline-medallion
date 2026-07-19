@@ -1,6 +1,0 @@
-requests
-pandas
-pyspark
-dbt-snowflake
-apache-airflow
-python-dotenv
