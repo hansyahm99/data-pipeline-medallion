@@ -1,0 +1,27 @@
+name: 'data_pipeline_medallion'
+version: '1.0.0'
+config-version: 2
+
+profile: 'data_pipeline_medallion'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  data_pipeline_medallion:
+    staging:
+      +materialized: view
+      +schema: staging
+    silver:
+      +materialized: view
+      +schema: staging
+    gold:
+      +materialized: table
+      +schema: gold

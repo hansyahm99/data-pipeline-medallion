@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    database: DE_PORTOFOLIO_DB
+    schema: RAW
+    tables:
+      - name: raw_exchange_rates
+        description: >
+          Raw exchange rate data loaded from bronze JSON files.One row per currency pair per ingestion run.

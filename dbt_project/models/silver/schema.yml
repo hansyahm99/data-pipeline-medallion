@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: silver_exchange_rates
+    description: >
+      Cleaned and deduplicated exchange rates. One row per
+      (base_currency, target_currency, rate_date).
+    columns:
+      - name: base_currency
+        tests:
+          - not_null
+      - name: target_currency
+        tests:
+          - not_null
+      - name: rate
+        tests:
+          - not_null
+      - name: rate_date
+        tests:
+          - not_null   
+
