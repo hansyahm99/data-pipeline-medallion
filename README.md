@@ -17,10 +17,7 @@ Data Sources          Ingestion              Orchestration
 (Raw data as-is)      (Cleaned, deduped)      (Business-ready,
  dbt: staging          dbt: intermediate       dbt: marts,
                                                 Snowflake)
-                                                     │
-                                                     ▼
-                                            BI & Reporting
-                                          (Tableau, Looker Studio)
+                                                     
 ```
 
 ### Layers
@@ -37,7 +34,6 @@ Data Sources          Ingestion              Orchestration
 - **Orchestration:** Apache Airflow
 - **Transformation & Modeling:** dbt
 - **Warehouse:** Snowflake
-- **BI / Visualization:** Tableau, Looker Studio
 
 ## Project Structure
 
