@@ -1,3 +1,18 @@
+# Environment & secrets
 .env
 venv/
+
+# Python
 __pycache__/
+*.pyc
+
+# Airflow runtime (database, logs — regenerated tiap kali airflow standalone dijalanin)
+airflow_home/
+
+# dbt compiled artifacts (regenerated tiap kali dbt run)
+dbt_project/target/
+dbt_project/logs/
+dbt_project/dbt_packages/
+
+# Generated data files (bronze JSON — hasil ingestion, bukan source code)
+data/

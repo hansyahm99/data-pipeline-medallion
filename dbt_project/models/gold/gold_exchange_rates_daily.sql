@@ -22,9 +22,9 @@ with_previous as (
 select
     base_currency,
     target_currency,
-    rate,
+    round(rate, 4) as rate,
     rate_date,
-    previous_rate,
+    round(previous_rate, 4) as previous_rate,
     round(
         case
             when previous_rate is not null and previous_rate != 0
